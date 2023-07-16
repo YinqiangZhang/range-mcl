@@ -137,3 +137,6 @@ local.properties
 
 # End of https://www.gitignore.io/api/c++,code,cmake,eclipse
 
+
+data/07/*
+

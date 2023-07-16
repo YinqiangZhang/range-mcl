@@ -8,7 +8,7 @@ import yaml
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-
+sys.path.append('src')
 from map_module import MapModule
 from motion_model import motion_model, gen_commands
 from resample_module import resample
@@ -21,6 +21,7 @@ from vis_loc_result import plot_traj_result, save_loc_result
 
 
 if __name__ == '__main__':
+  os.chdir('src')
   # load config file
   config_filename = '../config/localization.yml'
   if len(sys.argv) > 1:
