@@ -36,7 +36,7 @@ class MapModule:
     self.offset_y = 0
     self.numTiles_x = 0
     self.numTiles_y = 0
-    self.tile_size = 100
+    self.tile_size = 100 # the size of each tiles
     self.max_distance = max_distance
     self.keep_tile_maps = keep_tile_maps
     self.map_boundaries = [0, 0, 0, 0]  # [x_min, x_max, y_min, y_max]
@@ -56,7 +56,10 @@ class MapModule:
     self.poses = map_poses
     
     # initialize tiles
-    self.tiles = self.tile_init(self.poses, tile_size=self.tile_size, max_distance=self.max_distance)
+    self.tiles = self.tile_init(self.poses, 
+                                tile_size=self.tile_size, 
+                                max_distance=self.max_distance,
+                                plot_tiles=False)
     
     # calculate z for the tile maps
     self.calculate_tile_height()
